@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>CRUDS</title>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="header">
+            <h2>CRUDS</h2>
+            <h4>create read update delete search</h4>
+        </div>
+
+        <div class="data">
+            
+ 
+            <div class="prices">
+
+                <div class="title">
+                    <input type="text" required placeholder="Title">
+                </div>
+
+                <div class="flex-input">
+                    <input onkeyup="calculateTotal()" onchange="calculateTotal()" type="number" required placeholder="Price" class="price">
+                    <input onkeyup="calculateTotal()" onchange="calculateTotal()" type="number" required placeholder="Taxes" class="taxes">
+                    <input onkeyup="calculateTotal()" onchange="calculateTotal()" type="number" required placeholder="ADS" class="ads">
+                    <input onkeyup="calculateTotal()" onchange="calculateTotal()" type="number" required placeholder="Discount" class="discount">
+                    <div class="total">Total : <span>0</span></div>
+                </div>
+
+                <div class="count">
+                    <input type="number" max="10" placeholder="Count">
+                </div>
+                <div class="category">
+                    <input type="text" placeholder="Category" >
+                </div> 
+
+
+                <input type="submit" value="Create" class="create">
+            </div>
+            <div class="searchs">
+                <input type="search" class="search" placeholder="Search">
+            </div>
+
+            <div class="button-searches">
+                    <div class="content-flex">
+                        <span class="searchByTitle">Search By Title</span>
+                        <span class="searchByCategory">Search By Category</span>
+                    </div>
+                <div class="delete">Delete All (<span class="span-del">0</span>)</span></div>
+            </div>
+
+            <table class="table">
+                <thead>
+                    <th>ID</th>
+                    <th>TITLE</th>
+                    <th>PRICE</th>
+                    <th>TAXES</th>
+                    <th>ADS</th>
+                    <th>Discount</th>
+                    <th>TOTAL</th>
+                    <th>CATEGORY</th>
+                    <th>UPDATE</th>
+                    <th>DELETE</th>
+                </thead>
+
+                <tbody class="tbody">
+         
+                </tbody>
+            </table>
+        </div>
+
+
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
